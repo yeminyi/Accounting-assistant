@@ -49,8 +49,8 @@ export default class Record extends Component {
         <td>{this.props.record.title}</td>
         <td>{this.props.record.amount}</td>
         <td>
-          <button className="btn btn-info mr-1" onClick={this.handleToggle.bind(this)}>Edit</button>
-          <button className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
+          <button className="btn btn-info mr-1" onClick={this.handleToggle.bind(this)}> <i className="fa fa-edit"></i><span>Edit</span></button>
+          <button className="btn btn-danger" onClick={this.handleDelete.bind(this)}> <i className="far fa-trash-alt"></i><span>Delete</span></button>
         </td>
       </tr>
     );
