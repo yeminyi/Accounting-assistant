@@ -10,7 +10,11 @@ class Records extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      records: []
+      records: [],
+      // direction:{
+      //   'account':'asc',
+      // }
+      isAsc:true,
     }
     this.compareBy.bind(this);
     this.handleColumnClick.bind(this);
@@ -88,22 +92,35 @@ class Records extends Component {
   balance() {
     return this.credits() + this.debits();
   }
-  compareBy(key) {
+  compareBy(key,isAsc) {
     return function (a, b) {
-      console.log(a[key]);
+      console.log(isAsc);
+      if(isAsc){
+        if (a[key] < b[key]) return -1;
+        if (a[key] > b[key]) return 1;
+        return 0;
+      }
+      else{
+        if (a[key] > b[key]) return -1;
+        if (a[key] < b[key]) return 1;
+        return 0;
+      }
+      // ?a[key] - b[key]
+      // :b[key] - a[key]
       
-      if (a[key] < b[key]) return -1;
-      if (a[key] > b[key]) return 1;
-      return 0;
     };
   }
  
-  handleColumnClick(key) {
+  handleColumnClick(key,isAsc) {
     console.log(key);
     let arrayCopy = [...this.state.records];
-    console.log(arrayCopy);
-    arrayCopy.sort(this.compareBy(key));
-    this.setState({records: arrayCopy});
+    // console.log(this.compareBy(key));
+    arrayCopy.sort(this.compareBy(key,isAsc));
+    this.setState({
+      records: arrayCopy,
+      isAsc:  this.state.isAsc===true ?false :true
+      
+    });
   }
   // handleColumnClick(key) {
   //   console.log(key);
@@ -128,7 +145,7 @@ class Records extends Component {
               <span className='fas fa-sort Head-sort-margin' ></span> 
               </th>
               <th>Title</th>
-              <th onClick={() => this.handleColumnClick('amount')}>Amount 
+              <th onClick={() => this.handleColumnClick('amount',this.state.isAsc)}>Amount 
               <span className='fas fa-sort Head-sort-margin' ></span> 
               </th>
               <th>Actions</th>
