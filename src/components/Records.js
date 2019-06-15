@@ -135,8 +135,8 @@ class Records extends Component {
     if (error) {
       recordsComponent = <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      recordsComponent =  <div class="spinner-border text-primary" role="status">
-                            <span class="sr-only">Loading...</span>
+      recordsComponent =  <div className="spinner-border text-primary" role="status">
+                            <span className="sr-only">Loading...</span>
                           </div>;
     } else {
       recordsComponent = (
