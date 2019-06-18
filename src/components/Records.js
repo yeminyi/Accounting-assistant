@@ -122,12 +122,7 @@ class Records extends Component {
       
     });
   }
-  // handleColumnClick(key) {
-  //   console.log(key);
-  //   this.setState({
-  //     records:  this.state.records.sort((a,b) =>parseFloat(a[key])>parseFloat(b[key]))
-  //   })
-  // }
+
   render() {
     const { error, isLoaded, records } = this.state;
     let recordsComponent;

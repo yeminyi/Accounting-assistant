@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import * as RecordsAPI from '../utils/RecordsAPI';
 import DatePicker from "react-datepicker";
-
+import moment from 'moment';
 import "react-datepicker/dist/react-datepicker.css";
 
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 export default class RecordForm extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +16,6 @@ export default class RecordForm extends Component {
 
   handleChange(event) {
     let name, obj;
-    console.log(event);
     name = event.target.name;
     this.setState((
       obj = {},
@@ -40,11 +37,11 @@ export default class RecordForm extends Component {
     event.preventDefault();
 
     const data = {
-      date: this.state.date,
+      date: moment(this.state.date).format("DD/MM/YYYY"),
       title: this.state.title,
       amount: Number.parseInt(this.state.amount, 0)
     };
-
+    
     RecordsAPI.create(data).then(
       response => {
         this.props.handleNewRecord(response.data);
