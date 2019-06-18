@@ -52,7 +52,7 @@ export default class Record extends Component {
         <td>
           <button className="btn btn-info mr-1" onClick={this.handleToggle.bind(this)}> <i className="fa fa-edit"></i><span>Edit</span></button>
           <button className="btn btn-danger" 
-            onClick={(item) => { if (window.confirm('Are you sure you wish to delete this item?')) this.onCancel(item) } } > 
+            onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) this.handleDelete(e) } } > 
               <i className="far fa-trash-alt"></i><span>Delete</span>
           </button>
         </td>
