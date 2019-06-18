@@ -11,13 +11,10 @@ class Records extends Component {
       error: null,
       isLoaded: false,
       records: [],
-      // direction:{
-      //   'account':'asc',
-      // }
       isAsc:true,
     }
     this.compareBy.bind(this);
-    this.handleColumnClick.bind(this);
+    this.handleSortClick.bind(this);
   }
 
   componentDidMount() {
@@ -92,9 +89,11 @@ class Records extends Component {
   balance() {
     return this.credits() + this.debits();
   }
+
   compareBy(key,isAsc) {
+
     return function (a, b) {
-      console.log(isAsc);
+      
       if(isAsc){
         if (a[key] < b[key]) return -1;
         if (a[key] > b[key]) return 1;
@@ -105,21 +104,16 @@ class Records extends Component {
         if (a[key] < b[key]) return 1;
         return 0;
       }
-      // ?a[key] - b[key]
-      // :b[key] - a[key]
-      
+         
     };
   }
  
-  handleColumnClick(key,isAsc) {
-    console.log(key);
+  handleSortClick(key,isAsc) {
     let arrayCopy = [...this.state.records];
-    // console.log(this.compareBy(key));
     arrayCopy.sort(this.compareBy(key,isAsc));
     this.setState({
       records: arrayCopy,
-      isAsc:  this.state.isAsc===true ?false :true
-      
+      isAsc:  this.state.isAsc===true ?false :true      
     });
   }
 
@@ -138,11 +132,13 @@ class Records extends Component {
         <table className="table table-striped table-bordered">
           <thead>
             <tr>
-              <th>Date 
+              <th onClick={() => this.handleSortClick('date',this.state.isAsc)}>Date 
               <span className='fas fa-sort Head-sort-margin' ></span> 
               </th>
-              <th>Title</th>
-              <th onClick={() => this.handleColumnClick('amount',this.state.isAsc)}>Amount 
+              <th onClick={() => this.handleSortClick('title',this.state.isAsc)}>Title
+              <span className='fas fa-sort Head-sort-margin' ></span> 
+              </th>
+              <th onClick={() => this.handleSortClick('amount',this.state.isAsc)}>Amount 
               <span className='fas fa-sort Head-sort-margin' ></span> 
               </th>
               <th>Actions</th>

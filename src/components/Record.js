@@ -8,6 +8,7 @@ export default class Record extends Component {
     this.state = {
       edit: false
     };
+    this.handleDelete.bind(this);
   }
 
   handleToggle() {
@@ -50,7 +51,10 @@ export default class Record extends Component {
         <td>{this.props.record.amount}</td>
         <td>
           <button className="btn btn-info mr-1" onClick={this.handleToggle.bind(this)}> <i className="fa fa-edit"></i><span>Edit</span></button>
-          <button className="btn btn-danger" onClick={this.handleDelete.bind(this)}> <i className="far fa-trash-alt"></i><span>Delete</span></button>
+          <button className="btn btn-danger" 
+            onClick={(item) => { if (window.confirm('Are you sure you wish to delete this item?')) this.onCancel(item) } } > 
+              <i className="far fa-trash-alt"></i><span>Delete</span>
+          </button>
         </td>
       </tr>
     );

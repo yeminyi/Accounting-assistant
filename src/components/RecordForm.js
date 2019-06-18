@@ -46,7 +46,7 @@ export default class RecordForm extends Component {
       response => {
         this.props.handleNewRecord(response.data);
         this.setState({
-          date: "",
+          date: new Date(),
           title: "",
           amount: ""
         })
@@ -60,7 +60,9 @@ export default class RecordForm extends Component {
     return (
       <form className="form-inline mb-3" onSubmit={this.handleSubmit.bind(this)}>
         <div className="form-group mr-1">
-          <DatePicker className="form-control"  placeholder="Date" name="date" value={this.state.date}
+          <DatePicker className="form-control"  placeholder="Date" name="date" 
+              dateFormat="dd/MM/yyyy"
+              value={this.state.date}
               selected={this.state.date}
               onChange={this.handleDateChange.bind(this)}
           />
