@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Accounting-assistant/static/css/main.6c0d2200.chunk.css",
+    "main.js": "/Accounting-assistant/static/js/main.f0bfe7b5.chunk.js",
+    "main.js.map": "/Accounting-assistant/static/js/main.f0bfe7b5.chunk.js.map",
+    "runtime~main.js": "/Accounting-assistant/static/js/runtime~main.60584000.js",
+    "runtime~main.js.map": "/Accounting-assistant/static/js/runtime~main.60584000.js.map",
+    "static/css/2.c7bb94bc.chunk.css": "/Accounting-assistant/static/css/2.c7bb94bc.chunk.css",
+    "static/js/2.63338d5e.chunk.js": "/Accounting-assistant/static/js/2.63338d5e.chunk.js",
+    "static/js/2.63338d5e.chunk.js.map": "/Accounting-assistant/static/js/2.63338d5e.chunk.js.map",
+    "index.html": "/Accounting-assistant/index.html",
+    "precache-manifest.426ab9bc1c33724f624ae896a8f1c13d.js": "/Accounting-assistant/precache-manifest.426ab9bc1c33724f624ae896a8f1c13d.js",
+    "service-worker.js": "/Accounting-assistant/service-worker.js",
+    "static/css/2.c7bb94bc.chunk.css.map": "/Accounting-assistant/static/css/2.c7bb94bc.chunk.css.map",
+    "static/css/main.6c0d2200.chunk.css.map": "/Accounting-assistant/static/css/main.6c0d2200.chunk.css.map"
+  }
+}
