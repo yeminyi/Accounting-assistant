@@ -1,10 +1,15 @@
-##Simple Practise for Learning React - Accounting Assistant
-Visit the Demo
-https://yeminyi.github.io/Accounting-assistant/
+# Accounting Assistant
 
-Todo
-1 Add input validation
-2 delete confirm  or make the confirm dialog to a component
-4 change a new look/ mobile UI 
-5 loading more/ pagination
-6 search bar
+## Simple Practise for Learning React
+
+> This is the [Demo](https://yeminyi.github.io/Accounting-assistant/)
+(<https://yeminyi.github.io/Accounting-assistant/)>
+
+> ### Todo
+>
+> - Add input validation.
+> - delete confirm  or make the confirm
+> - dialog to a component.
+> - change a new look/ mobile UI 
+> - loading more/ pagination
+> - search bar
