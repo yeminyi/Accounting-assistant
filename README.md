@@ -8,8 +8,7 @@
 > ### Todo
 >
 > - input validation.
-> - delete confirm  or make the confirm
-> - dialog to a component.
+> - delete confirm  or make the confirm dialog to a component.
 > - change a new look/ mobile UI
 > - loading more/ pagination
 > - search bar
