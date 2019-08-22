@@ -50,10 +50,10 @@ export default class Record extends Component {
         <td>{this.props.record.title}</td>
         <td>{this.props.record.amount}</td>
         <td>
-          <button className="btn btn-info mr-1" onClick={this.handleToggle.bind(this)}> <i className="fa fa-edit"></i><span>Edit</span></button>
-          <button className="btn btn-danger" 
+          <button className="btn" onClick={this.handleToggle.bind(this)}><i className="fa fa-edit"></i><span></span></button>
+          <button className="btn" 
             onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) this.handleDelete(e) } } > 
-              <i className="far fa-trash-alt"></i><span>Delete</span>
+              <i className="far fa-trash-alt"></i><span></span>
           </button>
         </td>
       </tr>
@@ -67,8 +67,8 @@ export default class Record extends Component {
         <td><input type="text" className="form-control" defaultValue={this.props.record.title} ref="title" /></td>
         <td><input type="text" className="form-control" defaultValue={this.props.record.amount} ref="amount" /></td>
         <td>
-          <button className="btn btn-info mr-1" onClick={this.handleEdit.bind(this)}>Update</button>
-          <button className="btn btn-danger" onClick={this.handleToggle.bind(this)}>Cancel</button>
+          <button className="btn" onClick={this.handleEdit.bind(this)}><i className="fas fa-check"></i></button>
+          <button className="btn" onClick={this.handleToggle.bind(this)}><i className="fas fa-times"></i></button>
         </td>
       </tr>
     );

@@ -8,3 +8,6 @@ body {
   margin: 10px 0 10px 5px;
   color: '#ccc' ;
 }
+.text-center {
+  text-align: center!important;
+}

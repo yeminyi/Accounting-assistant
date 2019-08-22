@@ -160,7 +160,8 @@ class Records extends Component {
 
     return (
       <div className="container">
-        <h2>Records</h2>
+        <h2 className="text-center">Records</h2>
+        <hr className="my-2"></hr>
         <div className="row mb-3">
           <AmountBox text="Credit" type="success" amount={this.credits()} />
           <AmountBox text="Debit" type="danger" amount={this.debits()} />
