@@ -65,7 +65,7 @@ export default class Record extends Component {
       <tr>
         <td><input type="text" className="form-control" defaultValue={this.props.record.date} ref="date" /></td>
         <td><input type="text" className="form-control" defaultValue={this.props.record.title} ref="title" /></td>
-        <td><input type="text" className="form-control" defaultValue={this.props.record.amount} ref="amount" /></td>
+        <td><input type="number" inputMode="numeric" className="form-control" defaultValue={this.props.record.amount} ref="amount" /></td>
         <td>
           <button className="btn" onClick={this.handleEdit.bind(this)}><i className="fas fa-check"></i></button>
           <button className="btn" onClick={this.handleToggle.bind(this)}><i className="fas fa-times"></i></button>
