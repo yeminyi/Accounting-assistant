@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "421cca5ee3e34622aba3aed1693a4d00",
+    "revision": "9171ffafa3fee229a33f0b265a85d730",
     "url": "/Accounting-assistant/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Accounting-assistant/static/css/2.c7bb94bc.chunk.css"
   },
   {
-    "revision": "dc81065fef39f6eb3ec3",
+    "revision": "c253466541a25123e6a6",
     "url": "/Accounting-assistant/static/css/main.312eb08a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Accounting-assistant/static/js/2.63338d5e.chunk.js"
   },
   {
-    "revision": "dc81065fef39f6eb3ec3",
-    "url": "/Accounting-assistant/static/js/main.79875555.chunk.js"
+    "revision": "c253466541a25123e6a6",
+    "url": "/Accounting-assistant/static/js/main.09dc77e3.chunk.js"
   },
   {
     "revision": "bdefd0487aeea1850f04",
